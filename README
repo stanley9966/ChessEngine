@@ -1,2 +1,6 @@
-- need a vector representation of the game state
-- 
+Pre-process chess games, serialize into 257 bit vector representation
+
+Steps
+- Download data from a source, put into data dir
+- run generate_training_set.py, which uses state.py
+- train.py

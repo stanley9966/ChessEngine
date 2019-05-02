@@ -3,4 +3,21 @@ Pre-process chess games, serialize into 257 bit vector representation
 Steps
 - Download data from a source, put into data dir
 - run generate_training_set.py, which uses state.py
+- install tensorflow and keras (optionally hdf5)
 - train.py
+
+- train based on this 257 bit representation
+- read paper on conv nets for chess engine
+
+NOTES
+- the conv net is for preprocessing -> to feed into multi-level perceptron
+- series of epochs
+- RLU -> introduce nonlinearity, why? bc otherwise, no matter how many layers, could always be modeled by a linear combinationo
+
+Regularization -> avoid overfitting to the training set - Dropout - Randomly drop percentage of nodes
+
+Improvements:
+understand neural net read this: https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
+
+https://github.com/geohot/twitchchess - adapted from here
+https://pdfs.semanticscholar.org/28a9/fff7208256de548c273e96487d750137c31d.pdf  - use this high level approach

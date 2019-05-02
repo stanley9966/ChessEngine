@@ -16,8 +16,6 @@ if __name__ == "__main__":
     # Layers
     model.add(Conv2D(16, kernel_size=3, activation='relu', input_shape=(5,8,8)))
     model.add(Conv2D(32, kernel_size=3, activation='relu'))
-    model.add(Conv2D(64, kernel_size=3, activation='relu'))
-    model.add(Conv2D(128, kernel_size=3, activation='relu'))
 
     model.add(Flatten())
     model.add(Dense(1, activation='tanh'))
@@ -27,6 +25,6 @@ if __name__ == "__main__":
     X_train = loader.X 
     y_train = loader.Y
     batch_size = 256
-    num_epochs = 100
+    num_epochs = 100 
     model.fit(X_train, y_train, epochs=num_epochs, steps_per_epoch = batch_size)
     model.save('saved_model.h5')
